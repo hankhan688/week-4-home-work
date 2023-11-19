@@ -5,7 +5,7 @@
 #(hint: you will want your data to be a dataframe. Use the function: as.data.frame(Titanic))
 
 data("Titanic")
-a<-as.data.frame(Titanic)
+Newdata<-as.data.frame(Titanic)
 
 #See the top rows of the data
 #TASK: Write the function to see the top rows of the data
