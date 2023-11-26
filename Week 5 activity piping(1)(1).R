@@ -27,7 +27,8 @@ WorldCup<- read.csv("WorldCup.csv")
 #TASK: take a look at the World Cup data. 
 head(WorldCup)
 #TASK: Install and call the dplyr package. 
-
+install.packages("dplyr")
+library(dplyr)
 #Let's make a random sample of our data and save it
 #Task: run the code below
 mysample<-sample_n(WorldCup, size=15, replace = FALSE, weight = NULL, .env = NULL)
