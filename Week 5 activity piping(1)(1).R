@@ -35,6 +35,7 @@ mysample<-sample_n(WorldCup, size=15, replace = FALSE, weight = NULL, .env = NUL
 
 #TASK: Save the new sample as a csv file
 
+write.csv(mysample, 'WorldCupsample.csv')
 
 #Now let's have some fun with *piping*
 
@@ -58,4 +59,12 @@ mysample2<-rename(mysample2, Index1 = spi1, Index2 = spi2)
 mysample3<-select(mysample2, Index1, Index2, team1, team2 )
 mysample4<-summary(mysample3)
 print(mysample4)
+#Revised-------------------------------------------------
+piping<-mysample %>% 
+  arrange(date) %>% 
+  filter(spi1<80) %>% 
+  rename(Index1 = spi1, Index2 = spi2) %>% 
+  select(Index1, Index2, team1, team2) %>% 
+  summary() %>% 
+  print()
 
